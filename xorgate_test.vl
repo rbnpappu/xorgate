@@ -1,10 +1,10 @@
 module xorgate_tb;
-wire y;
-reg a,b;
-xorgate my_gate(.a(t_a),.b(t_b),.c(t_c));
+wire t_y;
+reg t_a,t_b;
+xorgate my_gate(.a(t_a),.b(t_b),.y(t_y));
 initial
 begin
-$monitor(t_a,t_b,t_c);
+$monitor(t_a,t_b,t_y);
 t_a=1'b 0;
 t_b=1'b 0;
 #5
